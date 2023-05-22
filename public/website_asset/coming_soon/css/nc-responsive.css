@@ -1,0 +1,195 @@
+/**
+***************************************************************
+* AUTHOR : NCodeArt
+* PROJECT : Instant Coming Soon Page
+* Purchase : http://www.ncodeart.com/
+*
+* Copyright 2015-2016 NCodeArt
+* NOTE : This file licensed to NCodeArt - http://themeforest.net/user/ncodeart and it is strictly prohibited to copy or reuse it.
+***************************************************************
+*/
+
+/**
+*****************************************************************
+* This file is licensed to NCodeArt.
+* it's not allowed to copy or reuse it Copyright NCodeArt 2016-2017
+* NCodeArt : http://www.ncodeart.com/
+*****************************************************************
+*/
+
+/*===========================================*/
+/*	DESKTOP LAYOUT 
+/*===========================================*/
+
+@media (min-width: 1200px) {
+
+}
+@media (min-width: 992px) {
+	
+}
+
+/*===========================================*/
+/*	MOBILE & TABLET COMMON
+/*===========================================*/
+@media (min-width: 200px) and (max-width: 991px) {
+	/*----------  NAVIGATION  ----------*/
+	.nav-wrp {	position: static; }
+	.nav-wrp.nav-sticky { position: fixed; width: 100%; }
+	.nav {
+		display: none;
+		height: auto !important;
+		bottom: inherit !important;
+		text-align: center !important;
+		position: static !important;
+		padding: 10px;
+		transform: none;
+		-webkit-transform: none;
+		-moz-transform: none;
+		-ms-transform: none;
+		float: none !important;
+	}
+	.nav-social,
+	.nav-links,
+	.nav-other,
+	.nav-other > a,
+	.nav-other > span { display: block; margin-bottom: 10px; }
+
+	.nav-header { position: relative; }
+	.nav-header,
+	.nav ul > li { float: none !important; }
+	.nav.open,
+	.nav-handle { display: block; }
+	.nav-wrp .nav { margin: 0 -15px; }
+	.nav-hide { top: 0; opacity: 1; }
+	/* .nav-wrp { position: static; } */
+	.navbar-brand { padding: 10px 0; }
+	.nav-wrp .navbar-brand img { max-height: 30px; }
+	
+	.nav .open .dropdown-menu {
+		position: static;
+		float: none;
+		width: auto;
+		margin-top: 0;
+		background-color: rgba(0,0,0,0.03);
+		border: 0;
+		box-shadow: none;
+	}
+	.dark.nav-wrp .dropdown-menu {
+		background-color: rgba(255,255,255,0.06);
+	}
+	.dark.nav-wrp .dropdown-menu li a { color: rgba(255,255,255,0.8); }
+	.dark.nav-wrp .dropdown-menu li a:hover { color: #fff; background-color: rgba(255,255,255,0.06); }
+	.dark.nav-wrp .dropdown-menu .divider {
+		background-color: rgba(255,255,255,0.1);
+	}
+	.sm-nav.sm-collapsible .caret, 
+	.sm-nav.sm-collapsible ul .caret {
+		margin-right: 10px;
+	}
+	
+	.m-nav { box-shadow: inset 0 1px 1px 0 rgba(0,0,0,0.1), 0 1px 2px 0 rgba(0,0,0,0.1); }
+	.m-nav > ul > li { border-bottom: 1px solid rgba(0,0,0,0.1) }
+	.light .m-nav > ul > li { border-bottom: 1px solid rgba(255,255,255,0.1) }
+	.dark .m-nav { box-shadow: inset 0 1px 1px 0 rgba(255,255,255,0.1); }
+	.m-nav .dropdown-menu { position: static; float: none; box-shadow: none; }
+
+	.nav-wrp [class*="gt"] { margin-left: 0; margin-right: 0; }
+	.nav-wrp [class*="gt"] > [class*="col-"] { padding-left: 0; padding-right: 0; }
+}
+
+
+/*===========================================*/
+/*	TABLET
+/*===========================================*/
+@media (min-width: 768px) and (max-width: 991px) {
+	
+	/*----------  TYPOGRAPHY  ----------*/
+	h1, .hd-1, .h1 { font-size: 46px; }
+	h2, .hd-2, .h2 { font-size: 36px; }
+	h3, .hd-3, .h3 { font-size: 26px; }
+	h4, .hd-4, .h4 { font-size: 22px; }
+	h5, .hd-5, .h5 { font-size: 20px; }
+	h6, .hd-6, .h6 { font-size: 18px; }
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+	/*----------  STRUCTURE  ----------*/
+	.intro-section {
+		padding: 80px 0;
+	}
+}
+
+/*===========================================*/
+/*	MOBILE
+/*===========================================*/
+@media (min-width: 200px) and (max-width: 767px) {
+
+	/*----------  TYPOGRAPHY  ----------*/
+	h1, .hd-1, .h1 { font-size: 40px; }
+	h2, .hd-2, .h2 { font-size: 30px; }
+	h3, .hd-3, .h3 { font-size: 24px; }
+	h4, .hd-4, .h4 { font-size: 22px; }
+	h5, .hd-5, .h5 { font-size: 20px; }
+	h6, .hd-6, .h6 { font-size: 18px; }
+	
+	/*----------  STRUCTURE  ----------*/
+	body,
+	.nc-main-wrapper {
+		height: auto;
+		z-index: 0;
+	}
+	.intro-section {
+		padding: 80px 0;
+	}
+	.nc-popup-content {
+		min-width: 0;
+		min-height: 0;
+		width: 100%;
+		max-width: 100%;
+		height: 100%;
+		overflow: scroll;
+		margin: 0;
+	}
+	.nc-popup-content--wrp{
+		padding: 30px;
+	}
+	.nc-popup-close {
+	    top: 10px;
+	    right: 10px;
+	    left: initial;
+	    width: 30px;
+	    height: 30px;
+	}
+
+	.gmap-widget,
+	.nc-map {
+		height: 1px;
+	}
+
+}
+@media (min-width: 600px) and (max-width: 767px) {
+}
+@media (min-width: 480px) and (max-width: 599px) {
+	
+	/*----------  DEFAULT  ----------*/
+	.countdown-widget .dash {
+		padding: 0 10px;
+	}
+	.countdown-widget .inner-dash {
+		font-size: 26px;
+		min-width: 40px;
+	}
+
+}
+@media (min-width: 200px) and (max-width: 479px) {
+
+	/*----------  CLOCK  ----------*/
+	.countdown-widget .dash {
+		padding: 0 10px;
+	}
+	.countdown-widget .inner-dash {
+		font-size: 24px;
+		min-width: 38px;
+	}
+}

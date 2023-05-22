@@ -1,0 +1,153 @@
+/**
+***************************************************************
+* AUTHOR : NCodeArt
+* PROJECT : Instant Coming Soon Page
+* Purchase : http://www.ncodeart.com/
+*
+* Copyright 2015-2016 NCodeArt
+* NOTE : This file licensed to NCodeArt - http://themeforest.net/user/ncodeart and it is strictly prohibited to copy or reuse it.
+***************************************************************
+*/
+
+/**
+*****************************************************************
+* This file is licensed to NCodeArt.
+* it's not allowed to copy or reuse it Copyright NCodeArt 2016-2017
+* NCodeArt : http://www.ncodeart.com/
+*****************************************************************
+*/
+
+body,
+.nc-main-wrapper {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+}
+.nc-background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.intro-section {
+	position: relative;
+	width: 100%;
+	height: auto;
+	min-height: 100%;
+}
+.nc-background {
+	z-index: -1;
+}
+.intro-section {
+	z-index: 1;
+}
+.nc-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+/**
+*******************************************************************
+* POPUP
+*******************************************************************
+*/
+
+.nc-popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 2000;
+	visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.nc-popupshow {
+	visibility: visible;
+}
+.nc-popup-overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	/*opacity: 0;*/
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+
+	-webkit-animation-duration: 0.3s;
+	animation-duration: 0.3s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+
+	-webkit-animation-name: fadeOut;
+  	animation-name: fadeOut;
+}
+.nc-popupshow ~ .nc-popup-overlay {
+	/*opacity: 1;*/
+	visibility: visible;
+
+	-webkit-animation-duration: 0.4s;
+	animation-duration: 0.4s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+
+	-webkit-animation-name: fadeIn;
+  	animation-name: fadeIn;
+}
+
+/*----------  POPUP-EFFECT-1  ----------*/
+.nc-popup-effect1 .nc-popup-content {
+	-webkit-transform: translateY(20%);
+	-moz-transform: translateY(20%);
+	-ms-transform: translateY(20%);
+	transform: translateY(20%);
+	opacity: 0;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.nc-popupshow.nc-popup-effect1 .nc-popup-content {
+	-webkit-transform: translateY(0);
+	-moz-transform: translateY(0);
+	-ms-transform: translateY(0);
+	transform: translateY(0);
+	opacity: 1;
+}
+
+/*----------  POPUP-EFFECT-2  ----------*/
+.nc-popup-effect2 .nc-popup-close,
+.nc-popup-effect2 .nc-popup-content {
+-webkit-transform: scale(0.8);
+-moz-transform: scale(0.8);
+-ms-transform: scale(0.8);
+transform: scale(0.8);
+opacity: 0;
+-webkit-transition: all 0.3s;
+-moz-transition: all 0.3s;
+transition: all 0.3s;
+}
+
+.nc-popup-effect2 .nc-popup-content {
+	box-shadow: none;
+}
+.nc-popupshow.nc-popup-effect2 .nc-popup-close,
+.nc-popupshow.nc-popup-effect2 .nc-popup-content {
+-webkit-transform: scale(1);
+-moz-transform: scale(1);
+-ms-transform: scale(1);
+transform: scale(1);
+opacity: 1;
+}
