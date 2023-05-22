@@ -591,15 +591,7 @@
           
     </section>
 
-    <div class="content__subsection" id="demo">
-     <div class="content__subsection picker-container">
-                            <h4>Twelve hour clock:</h4>
-                           
-                        </div>
-
-                       
-                    </div>
-					
+   
 				
 					
 					
