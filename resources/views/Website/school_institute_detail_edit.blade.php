@@ -337,127 +337,149 @@
 																	<select id="course" name="course[]"  class="form-select select country-select" name="facilities" multiple >
                                                                         <option>Select Cources </option>
 																		@if('School'== $data->r_entity)
-                                                                       <option> 1Nursery </option>
-                                                                        <option> Pre-Primary </option>
-                                                                        <option> Primary </option>
-                                                                        <option>Junior KG
-                                                                        <option> Senior KG </option>
-                                                                        <option>1st Standard </option>
-                                                                        <option> 2nd Standard </option>
-                                                                        <option> 3rd Standard</option>
-                                                                        <option> 4th Standard </option>
-                                                                        <option> 5th Standard </option>
-                                                                        <option> 6th Standard </option>
-                                                                        <option> 7th Standard </option>
-                                                                        <option> 8th Standard </option>
-                                                                        <option> 9th Standard </option>
-                                                                        <option> 10th Standard</option>
-                                                                        <option> 11th </option>
-                                                                        <option> 12th</option>
+                                                                        @php
+                                                                       $lst=[' 1Nursery ',
+                                                                        ' Pre-Primary ',
+                                                                        ' Primary ',
+                                                                        'Junior KG
+                                                                        ' Senior KG ',
+                                                                        '1st Standard ',
+                                                                        ' 2nd Standard ',
+                                                                        ' 3rd Standard',
+                                                                        ' 4th Standard ',
+                                                                        ' 5th Standard ',
+                                                                        ' 6th Standard ',
+                                                                        ' 7th Standard ',
+                                                                        ' 8th Standard ',
+                                                                        ' 9th Standard ',
+                                                                        ' 10th Standard',
+                                                                        ' 11th ',
+                                                                        ' 12th',];
+                                                                        @endphp
+                                                                        @foreach($lst as $l)
+                                                                          <option value='{{$l}}' @if($data->entity_select == $l) selected="selected" @endif >{{$l}}</option>
+                                                                        @endforeach
+                                                                         
 																		@endif
-																		@if('College'== $data->r_entity)
-                                                                     
-                                                                        <option> B.com </option>
-                                                                        <option> M.com </option>
-                                                                        <option> LLB </option>
-                                                                        <option> LLM </option>
-                                                                        <option> BBA </option>
-                                                                        <option> MBA </option>
-                                                                        <option> CA Foundation </option>
-                                                                        <option> CA IPCC </option>
-                                                                        <option> CA Final </option>
-                                                                        <option> CS Foundation </option>
-                                                                        <option> CS Executive </option>
-                                                                        <option> CS Professional </option>
-                                                                        <option> ICWA Foundation </option>
-                                                                        <option> ICWA Inter </option>
-                                                                        <option> ICWA Final </option>
-                                                                        <option> Bachelor in Technology (B.Tech)
-                                                                        </option>
-                                                                        <option> Bachelor in Engineering (BE) </option>
-                                                                        <option> JEE-Main </option>
-                                                                        <option> GATE </option>
-                                                                        <option> UPCET </option>
-                                                                        <option> BITSAT </option>
-                                                                        <option> Bachelor of Science (B. Sc.) </option>
-                                                                        <option> Bachelor of Architecture ( B.Arch.)
-                                                                        </option>
-                                                                        <option> Architecture Designer </option>
-                                                                        <option> Interior Designer </option>
-                                                                        <option> Software Engineer </option>
-                                                                        <option> Research Analyst </option>
-                                                                        <option> MBBS (Bachelor of Medicine and Bachelor
-                                                                            of Surgery) </option>
-                                                                        <option> NEET Entrance exam </option>
-                                                                        <option> BDS (Bachelor of Dental Surgery)
-                                                                        </option>
-                                                                        <option> Botany/Zoology/Chemistry </option>
-                                                                        <option> Biochemistry </option>
-                                                                        <option> BHMS (Bachelor of Homeopathy Medicine
-                                                                            and Surgery) </option>
-                                                                        <option> B. Pharmacy </option>
-                                                                        <option> BPT (Bachelor of Physiotherapy)
-                                                                        </option>
-                                                                        <option> BAMS (Bachelor of Ayurvedic Medicine
-                                                                            Surgery)</option>
-                                                                        <option> BUMS (Bachelor of Unani Medicine and
-                                                                            Surgery) </option>
-                                                                        <option> Bioinformatics </option>
-                                                                        <option> Genetics </option>
-                                                                        <option> Forensic Sciences </option>
-                                                                        <option> Biotechnology </option>
-                                                                        <option> Environmental Science </option>
-                                                                        <option> Nursing </option>
-                                                                        <option> Bachelor in Business Studies </option>
-                                                                        <option> Bachelor of Legislative Law </option>
-                                                                        <option> CLAT </option>
-                                                                        <option> Bachelor of Management Studies
-                                                                        </option>
-                                                                        <option> Certified Financial Planner (CFP)
-                                                                        </option>
-                                                                        <option> Financial Analyst and Advisor </option>
-                                                                        <option> Investment Banking Analyst </option>
-                                                                        <option> Bachelor of Arts (BA) - 3 years
-                                                                        </option>
-                                                                        <option> Master of Arts (MA) </option>
-                                                                        <option> Bachelor of Computer Application (BCA)
-                                                                            - 3 years </option>
-                                                                        <option> Bachelor of Hotel Management (BHM)
-                                                                        </option>
-                                                                        <option> Bachelor of Journalism & Mass
-                                                                            Communication (BJMC) - 3 years</option>
-                                                                        <option> Bachelor of Elementary Education
-                                                                            (B.El.Ed) - 4 years </option>
-                                                                        <option> Bachelor of Fine Arts (BFA) - 3 years
-                                                                        </option>
-                                                                        <option> Fashion Designing - 3 to 4 years
-                                                                        </option>
-                                                                        <option> Diploma in IT </option>
+
+																	@if('College'== $data->r_entity)
+                                                                     @php
+                                                                        $lst=['B.com ',
+                                                                        'M.com ',
+                                                                        'LLB ',
+                                                                        'LLM ',
+                                                                        'BBA ',
+                                                                        'MBA ',
+                                                                        'CA Foundation ',
+                                                                        'CA IPCC ',
+                                                                        'CA Final ',
+                                                                        'CS Foundation ',
+                                                                        'CS Executive ',
+                                                                        'CS Professional ',
+                                                                        'ICWA Foundation ',
+                                                                        'ICWA Inter ',
+                                                                        'ICWA Final ',
+                                                                        'Bachelor in Technology (B.Tech)
+                                                                        ',
+                                                                        'Bachelor in Engineering (BE) ',
+                                                                        'JEE-Main ',
+                                                                        'GATE ',
+                                                                        'UPCET ',
+                                                                        'BITSAT ',
+                                                                        'Bachelor of Science (B. Sc.) ',
+                                                                        'Bachelor of Architecture ( B.Arch.)
+                                                                        ',
+                                                                        'Architecture Designer ',
+                                                                        'Interior Designer ',
+                                                                        'Software Engineer ',
+                                                                        'Research Analyst ',
+                                                                        'MBBS (Bachelor of Medicine and Bachelor
+                                                                            of Surgery) ',
+                                                                        'NEET Entrance exam ',
+                                                                        'BDS (Bachelor of Dental Surgery)
+                                                                        ',
+                                                                        'Botany/Zoology/Chemistry ',
+                                                                        'Biochemistry ',
+                                                                        'BHMS (Bachelor of Homeopathy Medicine
+                                                                            and Surgery) ',
+                                                                        'B. Pharmacy ',
+                                                                        'BPT (Bachelor of Physiotherapy)
+                                                                        ',
+                                                                        'BAMS (Bachelor of Ayurvedic Medicine
+                                                                            Surgery)',
+                                                                        'BUMS (Bachelor of Unani Medicine and
+                                                                            Surgery) ',
+                                                                        'Bioinformatics ',
+                                                                        'Genetics ',
+                                                                        'Forensic Sciences ',
+                                                                        'Biotechnology ',
+                                                                        'Environmental Science ',
+                                                                        'Nursing ',
+                                                                        'Bachelor in Business Studies ',
+                                                                        'Bachelor of Legislative Law ',
+                                                                        'CLAT ',
+                                                                        'Bachelor of Management Studies
+                                                                        ',
+                                                                        'Certified Financial Planner (CFP)
+                                                                        ',
+                                                                        'Financial Analyst and Advisor ',
+                                                                        'Investment Banking Analyst ',
+                                                                        'Bachelor of Arts (BA) - 3 years
+                                                                        ',
+                                                                        'Master of Arts (MA) ',
+                                                                        'Bachelor of Computer Application (BCA)
+                                                                            - 3 years ',
+                                                                        'Bachelor of Hotel Management (BHM)
+                                                                        ',
+                                                                        'Bachelor of Journalism & Mass
+                                                                            Communication (BJMC) - 3 years',
+                                                                        'Bachelor of Elementary Education
+                                                                            (B.El.Ed) - 4 years ',
+                                                                        'Bachelor of Fine Arts (BFA) - 3 years
+                                                                        ',
+                                                                        'Fashion Designing - 3 to 4 years
+                                                                        ',
+                                                                        'Diploma in IT ',];
+                                                                        @endphp
+
+                                                                        @foreach($lst as $l)
+                                                                          <option value='{{$l}}' @if($data->entity_select == $l) selected="selected" @endif >{{$l}}</option>
+                                                                        @endforeach
+                                                                         
+
 																		@endif
+
 																		@if('Institute'== $data->r_entity)
-                                                                        <option> Yoga </option>
-                                                                        <option> Photography </option>
-                                                                        <option> Acting and Anchoring </option>
-                                                                        <option> Junior Basic Training (JBT) </option>
-                                                                        <option> Travel and Tourism </option>
-                                                                        <option> Event Management </option>
-                                                                        <option> Paramedical Courses </option>
-                                                                        <option> Nursing courses </option>
-                                                                        <option> Web Designing </option>
-                                                                        <option> Digital Marketing</option>
-                                                                        <option> Graphic Design
-                                                                        <option> Tally </option>
-                                                                        <option> Interior Design </option>
-                                                                        <option> Beautician </option>
-                                                                        <option> Hardware and Networking </option>
-                                                                        <option> Photography </option>
-                                                                        <option> Air Hostess </option>
-                                                                        <option> MSCIT </option>
-                                                                        <option> MS-Excel </option>
-                                                                        <option> MS-Word </option>
-                                                                        <option> MS-Powerpoint </option>
-                                                                        <option> Computer Clases </option>
-                                                                        <option> DTP Classes </option> 
+                                                                        @php
+                                                                        $lst=['Yoga ',
+                                                                         'Photography ',
+                                                                         'Acting and Anchoring ',
+                                                                         'Junior Basic Training (JBT) ',
+                                                                         'Travel and Tourism ',
+                                                                         'Event Management ',
+                                                                         'Paramedical Courses ',
+                                                                         'Nursing courses ',
+                                                                         'Web Designing ',
+                                                                         'Digital Marketing',
+                                                                         'Graphic Design
+                                                                         'Tally ',
+                                                                         'Interior Design ',
+                                                                         'Beautician ',
+                                                                         'Hardware and Networking ',
+                                                                         'Photography ',
+                                                                         'Air Hostess ',
+                                                                         'MSCIT ',
+                                                                         'MS-Excel ',
+                                                                         'MS-Word ',
+                                                                         'MS-Powerpoint ',
+                                                                         'Computer Clases ',
+                                                                         'DTP Classes ', ]
+                                                                        @endphp
+
+                                                                        @foreach($lst as $l)
+                                                                          <option value='{{$l}}' @if($data->entity_select == $l) selected="selected" @endif >{{$l}}</option>
+                                                                        @endforeach
+                                                                         
 																		@endif
 																		<option> Other </option> 
 
